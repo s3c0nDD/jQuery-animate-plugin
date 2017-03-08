@@ -3,12 +3,12 @@ body {
     background-color: lightgray;  
 }
 
-ul {
+.list {
     list-style-type: none;
     max-width: 100px
 }
 
-ul > li {
+.list-item {
     padding: 1px 10px 1px 10px;
     margin-bottom: 2px;
     background-color: gray;

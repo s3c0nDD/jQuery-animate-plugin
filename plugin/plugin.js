@@ -1,12 +1,26 @@
-$(document).ready(function() {
-    console.log('loaded');
-});
+/******************** PLUGIN **********************/
 
 (function ( $ ) {
     
-    $.fn.animateMe = function ($el, animType, animTime, animDelay) {
-        console.log('animation start')
-        // TODO staff 
-        console.log('animation ends')
+    $.fn.animateMe = function (animType, animTime, animDelay) {
+        console.log('animation start');
+        
+        this.each(function functionName() {
+            // TODO: animate
+        });
+
+        console.log('animation ends');
+        
+        return this;
     };
 }( jQuery ));
+
+
+
+/******************** MAIN SCRIPT **********************/
+
+$(document).ready(function() {
+
+    $('.list').animateMe();
+    
+});
