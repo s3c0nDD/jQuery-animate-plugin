@@ -1,0 +1,15 @@
+body { 
+    margin: 100px 0 0 100px;
+    background-color: lightgray;  
+}
+
+ul {
+    list-style-type: none;
+    max-width: 100px
+}
+
+ul > li {
+    padding: 1px 10px 1px 10px;
+    margin-bottom: 2px;
+    background-color: gray;
+}
