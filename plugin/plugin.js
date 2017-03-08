@@ -3,10 +3,10 @@
 (function ( $ ) {
     /**
      * function animateMe(animType, animTime, animDelay)
-     * @param animType: string from: ['fadeIn', 'fadeOut']
-     * @param animType: number > 0
-     * @param animDelay: number >= 0
-     * 
+     * @param {string} animType - ['fadeIn', 'fadeOut']
+     * @param {number} animType - greater than 0
+     * @param {number} animDelay - greater or equal than 0
+     * @returns {Object}
      */
     $.fn.animateMe = function (animType, animTime, animDelay) {
         // Check if animation type is available
