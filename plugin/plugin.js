@@ -2,37 +2,20 @@
 
 (function ( $ ) {
     /**
-     * function animateMe(animType, animTime, animDelay)
-     * @param {string} animType - ['fadeIn', 'fadeOut']
-     * @param {number} animType - greater than 0
-     * @param {number} animDelay - greater or equal than 0
-     * @returns {Object}
+     * function animateMe
+     * @param {string} anim - string containing an animation type or whatever
+     * @param {object} config - configuration object required for animation
+     * @returns {object} - jQuery object
      */
-    $.fn.animateMe = function (animType, animTime, animDelay) {
-        // Check if animation type is available
-        var availableAnims = [
-            'fadeIn',
-            'fadeOut'
-            // TODO: can add another if wanna to
-        ]
-        if ( $.inArray(animType, availableAnims) === -1 )
-            return $.error('Not available animation type!'); 
-
-        // Check if animation time arguments makes sense
-        if ( typeof (animTime) !== 'number' || typeof (animDelay) !== 'number' ) 
-            return $.error('Animation times types are wrong (required: number)');
-        
-        if ( !(animTime > 0) || !(animDelay >= 0) ) 
-            return $.error('Wrong animation times!')
-        
-        // NOW WE CAN (try) REALLY Animate 
+    $.fn.animateMe = function (anim, config) {
+         
         this.each(function () {
             var self = this,
                 $children = $(this).children();
             //TODO: animate here
         });
         
-        // chaining stupid!
+        // remember chaining stupid!
         return this;
     };
 }( jQuery ));
