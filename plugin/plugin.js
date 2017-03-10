@@ -3,19 +3,32 @@
 (function ( $ ) {
     /**
      * function animateMe
-     * @param {string} anim - string containing an animation type or whatever
+     * @param {string} animName - string containing an animation type or whatever
      * @param {object} config - configuration object required for animation
      * @returns {object} - jQuery object
      */
-    $.fn.animateMe = function (anim, config) {
-         
-        this.each(function () {
-            var self = this,
-                $children = $(this).children();
-            //TODO: animate here
-        });
+    $.fn.animateMe = function (animName, config) {
+
+        var self = this;
+
+        if (typeof animName === 'string') {
+
+            self.each(function () {
+                var el = self, 
+                    $children = $(el).children();
+
+                window['$'](self)[animName](config);
+                
+                $children.each(function () {
+                    // TODO
+                });
+                
+            });
+
+        } else {
+            console.log("some error");
+        }
         
-        // remember chaining stupid!
         return this;
     };
 }( jQuery ));
@@ -25,7 +38,29 @@
 /******************** MAIN SCRIPT **********************/
 
 $(document).ready(function() {
+    
+    $('#list1').animateMe('fadeOut',configs[0]).animateMe('fadeIn',configs[0]);
+    $('#list2').animateMe('fadeOut',configs[1]);
+    // $('#list3').animateMe('fadeOut',configs[2]);    
 
-    $('.list').animateMe('fadeIn', 500, 200);
+    // console.log( window['$']('.list')['fadeOut']('slow') )
     
 });
+
+var configs = [
+    {
+        duration: 3000
+    },
+    {
+        duration: 4000,
+
+    },
+    {
+        //empty
+    }
+];
+var animations = [
+    'fadeOut',
+    'fadeIn',
+    'fadeTo'
+];
