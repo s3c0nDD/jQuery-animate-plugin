@@ -16,6 +16,6 @@ body {
     background-color: gray;
 }
 
-h1 {
+h1, h2, h3 {
     transition: all 2s ease-in-out;
 }
