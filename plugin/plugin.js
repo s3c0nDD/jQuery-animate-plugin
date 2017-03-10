@@ -42,22 +42,17 @@ $(document).ready(function() {
     $('#list1').animateMe('fadeOut',configs[0]).animateMe('fadeIn',configs[0]);
     $('#list2').animateMe('fadeOut',configs[1]);
     // $('#list3').animateMe('fadeOut',configs[2]);    
+    $('h1').animateMe('css',configs[2])
+        
 
     // console.log( window['$']('.list')['fadeOut']('slow') )
     
 });
 
 var configs = [
-    {
-        duration: 3000
-    },
-    {
-        duration: 4000,
-
-    },
-    {
-        //empty
-    }
+    { duration: 3000 },
+    { duration: 4000 },
+    { color: 'red' }
 ];
 var animations = [
     'fadeOut',
