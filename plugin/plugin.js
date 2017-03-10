@@ -36,10 +36,7 @@ $(document).ready(function() {
     // $('#list2').animateMe('fadeOut',configs[1]);
     // $('#list3').animateMe('fadeOut',configs[2]);    
     $('.title').animateMe('css',configs[2])
-        
-
-    // console.log( window['$']('.list')['fadeOut']('slow') )
-    
+            
 });
 
 var configs = [
